@@ -18,12 +18,9 @@ class CollisionBox(CollisionObject):
     def isCollision(self, target):
         llimit = self.location
         ulimit = self.location+self.lengths
-        print ("Collision Check:", target, llimit, ulimit)
         if (np.all(target>=llimit) and np.all(target<=ulimit)):
-            print("Yes Collision")
             return True 
         else:
-            print("No Collision")
             return False
 
 
